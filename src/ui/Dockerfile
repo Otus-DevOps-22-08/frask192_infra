@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
 RUN apt-get update \
- && apt-get install -y ruby-full ruby-dev build-essential \
- && gem install bundler --no-ri --no-rdoc \
- && rm -rf /var/lib/apt/lists/*
+ apt-get install -y ruby-full ruby-dev build-essential \
+ gem install bundler:1.17.2 --no-ri --no-rdoc \
+ rm -rf /var/lib/apt/lists/*
 
 ENV APP_HOME /app
 RUN mkdir $APP_HOME
